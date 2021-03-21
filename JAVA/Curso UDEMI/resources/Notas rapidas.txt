@@ -1,5 +1,0 @@
-- Dentro de un archivo java solo debe haber una clase public
-- Caundo se usa String si el string es igual a otro string ambas variables apuntan a la misma referencia en memoria a no ser que se inicialice new Sting("<valor>")
-- Si no se usa public protected o private se entiende como default o package
-- Todos las clases heredan de Object
-- Object se encarga de reservar en memoria
