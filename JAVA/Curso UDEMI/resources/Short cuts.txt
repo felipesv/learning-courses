@@ -1,0 +1,3 @@
+soutv + tab -> poner el system out print
+psvm + tab -> crear un public static void main
+ctrl + e -> borra la linea
