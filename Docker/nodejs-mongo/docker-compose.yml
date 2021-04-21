@@ -1,0 +1,21 @@
+version: "3" # version del docekr-compose que va a usar
+
+services: # dentro de esta etiqueta se 
+    web: # nombre del servicio
+        container_name: exampleapp # nombre del contenedor
+        restart: always # si hay una falla siempre se va a reiniciar
+        build: . # construye apartir del dockerfile encontrado en la ruta .
+        ports: 
+            - "5000:3000" # enlazar el puerto externo con el interto
+        links:
+            - mongo # este servicio esta enlazado con otro servicio (poner el nombre del servicio)
+        volumes: 
+            - .:/usr/src/app # todo lo que esta en mi directorio de trabajo lo va a copiar dentro de /usr/src/app que es la ruta dentro del contenedor donde esta mi app, de manera dinamica
+    mongo:
+        container_name: mymongodatabase
+        image: mongo # imagen que va a usar el contenedor
+        ports: 
+            - "27018:27017"
+        logging:
+            driver: none # evita que salgan los logs de mongo en la consola
+
