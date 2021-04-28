@@ -20,7 +20,7 @@ docker run -p 4000:3000 hellonode
 docker-compose build 
 
 # levanta el servicio
-docekr-compose up
+docker-compose up
 
 # detener el servicio
 docker-compose stop
